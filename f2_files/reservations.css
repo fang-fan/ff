@@ -1,0 +1,140 @@
+.resve{
+    text-align: center;
+    font-size: 0.5222rem;
+    color: #09bb07;
+    padding: 0.3333rem 0 0.5444rem 0;
+    border-bottom: 1px solid #c9c9c9;
+}
+.resve img{
+   width: 30%;
+}
+.resve_user{
+    line-height: 0.85rem;
+    font-size: 0.4222rem;
+    padding: 0 0.685rem;
+    margin-top: 0.555rem;
+}
+.resve_user p{
+    display: flex;
+    color: #000000;
+}
+.resve_user p a{
+   flex: 1;
+    color: #0707ff;
+}
+.resve_ewm{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    margin-top: 0.599rem;
+}
+.obtain_ewm{
+    text-align: center;
+    color: #1e7df3;
+}
+.obtain_ewm a{
+    display: inline-block;
+    padding: 0.25rem 0.8888rem;
+    background: #f4f4f4;
+    font-size: 0.39777rem;
+    border-radius: 0.555rem;
+}
+.resve_button{
+    padding: 0 0.485rem;
+    overflow: hidden;
+    margin-top: 0.3444rem;
+}
+.resve_button button{
+    padding: 0.2933rem 0;
+    width: 46%;
+    font-size: 0.444444rem;
+    float: left;
+    border-radius: 0.155rem;
+    background: #1e7df3;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+.resve_button button:nth-last-of-type(1){
+    float: right;
+}
+.process,.resve_prompt{
+    border: 1px dashed #b9d0ea;
+    margin: 0.444rem 0.444rem;
+    padding: 0.3333rem 0.39rem;
+}
+.resve_prompt{
+    border-color: #ffd6ad;
+}
+.process_title{
+    text-align: center;
+    font-size: 0.404444rem;
+}
+.process_title a{
+    background: #1e7df3;
+    color: #fff;
+    display: inline-block;
+    padding: 0.222rem 0.75rem;
+    border-radius: 20px;
+    font-size: 18px;
+}
+.process_list ul{
+    margin-top: 0.4333rem;
+}
+.process_list ul li{
+    padding-bottom: 40px;
+    position: relative;
+    display: flex;
+    height: 50px;
+}
+.process_list ul li:nth-last-of-type(1){
+    padding-bottom: 0.333rem
+}
+.process_list ul li:nth-last-of-type(1) .process_load{
+    display: none;
+}
+.process_list ul li a{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #1e7df3;
+    color: #1e7df3;
+    float: left;
+}
+.process_list ul li p{
+    float: right;
+    flex: 1;
+    margin-left: 0.355rem;
+}
+.process_list ul li p .process_load_title{
+    font-size: 18px;
+    display: block;
+    color: #333333;
+    text-align: left;
+}
+.process_list ul li p .process_load_list{
+    font-size: 13px;
+    line-height: 0.35rem;
+    float: left;
+    color: #999999;
+    line-height: 14px;
+    text-align: left;
+}
+.process_load{
+    position: absolute;
+    height: 25px;
+    left: 23px;
+    top: 60px;
+}
+.resve_prompt{
+    font-size: 0.39rem;
+    line-height: 0.6666rem;
+    text-align: justify;
+}
+.resve_prompt .resve_prompt_red{
+    color: #ff0000;
+}
