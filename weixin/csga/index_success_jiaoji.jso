@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html class="pixel-ratio-1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>微警务</title>
+    
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+<link rel="stylesheet" href="./f2_files/reservations.css">
+
+<link rel="stylesheet" href="./f2_files/weui.min.css">
+<link rel="stylesheet" href="./f2_files/jquery-weui.css">
+<link rel="stylesheet" href="./f2_files/demos.css">
+<style>
+	.weui-media-box__desc{
+		color:#000000;
+	}
+	.weui-msg__icon-area {
+		margin-bottom: 12px;
+	}
+	.weui-btn_primary:active {
+		color: #fff;
+		border: 1px solid #fff;
+		background-color: #1e7df3!important; 
+	}
+	.weui-media-box__desc{
+		    font-size: 13px;
+		line-height: 1.2;
+		overflow: auto;
+		text-overflow: initial;
+		display: -webkit-box;
+		-webkit-box-orient: initial;
+		-webkit-line-clamp: initial;
+	}
+	.weui-btn-area {
+		margin: 1.17647059em 6px .3em;
+	}
+	.weui-msg {
+		padding-top: 12px;
+	}
+	.weui-icon_msg {
+		font-size: 40px;
+	}
+</style>
+	
+	
+	
+  </head>
+  <body ontouchstart="" style="background-color:#FFFFFF;">
+  	<div class="weui-msg">
+      <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i><font style="color:#09BA07;vertical-align: middle;font-size:18px;">&nbsp;恭喜您，预约成功！</font></div>
+     
+	  <div style="width:100%;border-top: 1px solid #CCCCCC;">
+	  		<table width="100%" style="margin-top:10px;">
+				<tbody><tr>
+					<td width="30%" style="text-align:right;padding-left:5px; vertical-align:top;">办理单位：</td>
+					<td style="color:blue;text-align:left; padding-right:5px;">宁乡市市民之家交警处教中心</td>
+				</tr>
+				<tr>
+					<td style="text-align:right;padding-left:5px;vertical-align:top;">预约事项：</td>
+					<td style="color:blue;text-align:left;padding-right:5px;">非现场交通违法办理预约</td>
+				</tr>
+				<tr>
+					<td style="text-align:right;padding-left:5px;vertical-align:top;">姓名：</td>
+					<td style="color:blue;text-align:left;padding-right:5px;">余建芝</td>
+				</tr>
+				<tr>
+					<td style="text-align:right;padding-left:5px;vertical-align:top;">证件号码：</td>
+					<td style="color:blue;text-align:left;padding-right:5px;">430124****7147</td>
+				</tr>
+				<tr>
+					<td style="text-align:right;padding-left:5px;vertical-align:top;">手机号码：</td>
+					<td style="color:blue;text-align:left;padding-right:5px;">13635659851</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align:right;padding-left:5px;vertical-align:top;">号牌号码：</td>
+					<td style="color:blue;text-align:left;padding-right:5px;">湘AA5Z22</td>
+				</tr>	
+				
+				<tr>
+					<td style="text-align:right;padding-left:5px;vertical-align:top;">预约时间：</td>
+					<td style="color:blue;text-align:left;padding-right:5px;">2019-10-15 13:00-16:30</td>
+				</tr>
+				
+			</tbody></table>
+			<table width="100%">
+				<tbody><tr style="line-height:30px;">
+					
+					<td width="33.3%">
+						<div class="weui-btn-area">
+						  
+						   <a class="weui-btn weui-btn_primary" href="javascript:void(&#39;0&#39;);" onclick="showpcs()">办事指南</a>
+						</div>
+					</td>
+					<td width="33.4%">
+						<div class="weui-btn-area">
+						  <a class="weui-btn weui-btn_primary" href="javascript:void(&#39;0&#39;);" onclick="codeAddress()">位置导航</a>
+						</div>
+					</td>
+					<td width="33.3%">
+						<div class="weui-btn-area">
+						  <a class="weui-btn weui-btn_primary" href="javascript:WeixinJSBridge.call(&#39;closeWindow&#39;);">完成预约</a>
+						</div>
+					</td>
+					
+				</tr>
+			</tbody></table>
+			
+	  </div>
+	  <div id="showcl" style="display:none; text-align:left;">
+	  		<div class="weui-panel weui-panel_access">
+				<div class="weui-panel__hd"><font style="color:#0000FF;font-size:16px;">非现场交通违法办理预约</font><font color="#FF0000" onclick="myHide()">【隐藏】</font></div>
+				<div class="weui-panel__bd">
+					<div id="showHtml">
+					</div>
+				</div>
+      		</div>
+	  </div>
+	  <div class="process" style="display:none;" id="bslcxx">
+            <p class="process_title"><a>办事流程</a></p>
+            <div class="process_list">
+                <ul id="bslc">
+                   
+                </ul>
+            </div>
+        </div>
+	  <div style="border:1px dashed #FFCC99;margin:0.444rem;text-align:left;">
+	  	 <label for="weuiAgree" class="weui-agree">
+		  <font color="red">温馨提示:</font><br>&nbsp;&nbsp;（1）同一个微信号、身份证号一天只能预约1次，且30天内只能预约3次，一年内取消不能超过5次；当天取消预约的用户，当天不能再预约该业务，取消预约的请在该时段之前进行；<br>&nbsp;&nbsp;（2）预约成功后，必须在预约时间内到预约办事窗口向工作人员出示预约信息，相同时间段的预约先取号的先办理，已预约的优先办理、当天办结。<font color="red">预约号仅限预约人本人办理，谁预约谁办理，只能办理预约人员本人和预约车辆的违法，预约事项只能为实际办理事项。预约时间段只做参考，以现场工作人员根据进度安排为准；</font>
+
+		</label>
+	  </div>
+	</div>
+	 <script src="./f2_files/jquery-2.1.4.js"></script>
+	 <script src="./f2_files/fastclick.js"></script>
+	 <script src="./f2_files/swiper.js"></script>
+	 
+	<script src="./f2_files/jquery-weui.js"></script>
+	
+	<!-- <script src="/weixin/csga/js/jquery.min.js"></script>-->
+	  <script src="./f2_files/jquery.qrcode.min.js"></script>
+	  <script charset="utf-8" src="./f2_files/js"></script><script src="./f2_files/main.js" type="text/javascript"></script>
+	  
+	  <script type="text/javascript">
+	  showyylc();
+	 /* var geocoder=null;
+	  $(function() {
+	  	 geocoder = new qq.maps.Geocoder({
+			complete : function(result){
+			var coord=result.detail.location;
+			 window.location.href="http://apis.map.qq.com/uri/v1/geocoder?coord="+coord+"&referer=myapp";;
+			}
+		});
+		FastClick.attach(document.body);
+	  });*/
+	  function codeAddress() {
+	  	var mapx="";
+		var mapy="";
+		var sunit_name="宁乡市市民之家交警处教中心";
+		if(""==mapx){
+			window.location.href="https://3gimg.qq.com/lightmap/components/locationCluster/index.html?type=1&keyword="+sunit_name+"&region=%E9%95%BF%E6%B2%99&key=TKUBZ-D24AF-GJ4JY-JDVM2-IBYKK-KEBCU&referer=tengxun&ch=uri-api&ADTAG=uri-api.tengxun";
+		}else{
+			window.location.href="http://apis.map.qq.com/tools/poimarker?type=0&marker=coord:"+mapx+","+mapy+";title:长沙市;addr:"+sunit_name+"&key=TKUBZ-D24AF-GJ4JY-JDVM2-IBYKK-KEBCU&referer=myapp";
+		}
+		
+		
+	}
+	  function getQueryString(name) {
+		 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if(r!=null)return  r[2]; return "";
+		}
+		var sdono=getQueryString("sdono");
+	  	
+		var bszn="0";
+		function showpcs(){
+			if(bszn=="1"){
+					$("#showcl").css("display","");
+			}else{
+				$.showLoading("加载中");
+				var url="http://csga.hncsga.cn";
+				$.ajax({
+					url:"csga_index.jsp",
+					async: true,
+					type: "post",
+					dataType:"json",
+					data: {"nid":sdono,"stype":"2","sbusname":"非现场交通违法办理预约","sbusno":"6801","app_huji":""},
+					success: function(data){
+					
+						$("#showHtml").html();
+						var st="";
+						var lst="";
+						if(data.sta=="0"){
+							bszn="1";
+							st=st+"<a href=\"javascript:void(0);\" class=\"weui-media-box weui-media-box_appmsg\">";
+								st=st+"<div class=\"weui-media-box__bd\">";
+								
+								
+							for(var i=0;i<data.des.length;i++){
+							
+								lst=lst+data.des[i].sitem;
+							}
+							st=st+"<p class=\"weui-media-box__desc\">"+lst+"</p>";
+							st=st+"</div>";
+							st=st+"</a>";
+							$("#showHtml").html(st);
+							$("#showcl").css("display","");
+						}else{
+							 //$.toast(data.des, "text");
+							 $.alert("指南完善中");
+							 $("#showcl").css("display","none");
+						}
+						$.hideLoading();
+					},
+					error: function(data){
+						$.alert("调用异常");
+						$.hideLoading();
+					}
+				});
+			}
+		}
+		
+		function showpic(url,name){
+			 var pb2 = $.photoBrowser({
+				items: [
+				  {
+					image: url,
+					caption: name
+				  }
+				],
+				initIndex: 0
+			  });
+        	pb2.open();
+		}
+				
+		
+		function myHide(){
+			$("#showcl").css("display","none");
+		} 
+	  </script>
+  
+  
+  </body></html>
